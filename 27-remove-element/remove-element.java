@@ -15,6 +15,7 @@ class Solution {
                 index++;
             }
         }
+    
         for(int i=0;i<index;i++)
         {
             nums[i]=love[i];
