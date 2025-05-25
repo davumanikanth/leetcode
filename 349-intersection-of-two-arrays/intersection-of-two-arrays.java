@@ -36,12 +36,12 @@ class Solution {
         // return sri;
         
         //usnig linkedhashset
-        Set<Integer> set1=new LinkedHashSet<>();
+        Set<Integer> set1=new HashSet<>();
         for(int n: nums1)
         {
             set1.add(n);
         }
-        Set<Integer> set2=new LinkedHashSet<>();
+        Set<Integer> set2=new HashSet<>();
         for(int n:nums2)
         {
             if(set1.contains(n))
