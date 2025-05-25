@@ -1,6 +1,6 @@
 class Solution {
     public int missingNumber(int[] nums) {
-      Set<Integer> result=new HashSet<>();
+      HashSet<Integer> result=new HashSet<>();
       int n=nums.length;
       for(int num: nums)
       {
