@@ -16,7 +16,7 @@ class Solution {
         
         // return index;
 
-int n=nums.length;
+       int n=nums.length;
         int[] love=new int[n];
         int index=0;
         for(int i=0;i<n-1;i++)
