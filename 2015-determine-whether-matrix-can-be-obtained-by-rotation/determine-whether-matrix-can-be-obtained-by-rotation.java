@@ -3,6 +3,7 @@ class Solution {
          int n=mat.length;
          for(int i=0;i<4;i++)
          {
+            
             if(issame(mat,target))
             {
                 return true;
