@@ -1,3 +1,4 @@
+//not understanded please follow later
 class Solution {
     public String robotWithString(String s) {
         int n = s.length();
