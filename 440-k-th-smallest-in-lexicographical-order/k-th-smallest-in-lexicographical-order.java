@@ -1,3 +1,4 @@
+//brute force method
 // class Solution {
 //     public int findKthNumber(int n, int k) {
 //         List<String> substring=new ArrayList<>();
@@ -14,6 +15,7 @@
 //         return number.get(k-1);
 //     }
 // }
+//did not understand
 class Solution {
     public int findKthNumber(int n, int k) {
         int curr = 1;
