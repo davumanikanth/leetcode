@@ -10,18 +10,19 @@ class Solution {
         }
        
         }
-       if(lowercase==word.length())
+      if(lowercase==0) //USA
        {
         return true;
        }
-       else if(Character.isUpperCase(word.charAt(0)) && lowercase==word.length()-1 )
+       else if(lowercase==word.length())//leetcode
        {
         return true;
        }
-       else if(lowercase==0)
+        else if(Character.isUpperCase(word.charAt(0)) && lowercase==word.length()-1 )//Google
        {
         return true;
        }
+       
 
        return false;
     }
