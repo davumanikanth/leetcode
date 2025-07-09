@@ -8,7 +8,7 @@ class Solution {
      {
         if(s.length()>2)
         {
-        result[index++]=Character.toUpperCase(s.charAt(0))+s.substring(1);
+        result[index++]=s.substring(0,1).toUpperCase()+s.substring(1);
      
         }
         else
