@@ -9,6 +9,8 @@ class Solution {
             for(int j=0;j<m;j++)
             {
                 map.computeIfAbsent(i-j,k->new PriorityQueue<>()).add(mat[i][j]);
+                // for max heap problem no :3446
+                //  map.computeIfAbsent(i-j,k->new PriorityQueue<>(Collections.reverseOrder())).add(mat[i][j]);
             }
         }
         for(int i=0;i<n;i++)
