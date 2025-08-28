@@ -12,7 +12,7 @@ class Solution {
         {
             return false;
         }
-        
         return isPowerOfThree(n/3);
+        
     }
 }
