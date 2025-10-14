@@ -14,8 +14,9 @@
  * }
  */
 class Solution {
-    private int sum=0;
+    
     public int sumOfLeftLeaves(TreeNode root) {
+        int sum=0;
         if(root==null)
         {
             return 0;
@@ -24,8 +25,8 @@ class Solution {
         {
             sum=sum+root.left.val;
         }
-        sumOfLeftLeaves(root.left);
-        sumOfLeftLeaves(root.right);
+        sum+=sumOfLeftLeaves(root.left);
+        sum += sumOfLeftLeaves(root.right);
         return sum;
         
     }
