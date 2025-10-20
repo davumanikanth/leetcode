@@ -69,6 +69,7 @@ class Solution {
             {
                 if(visited[con]==false)
                 {
+                    visited[con]=true;
                     q.offer(con);
                 }
             }
