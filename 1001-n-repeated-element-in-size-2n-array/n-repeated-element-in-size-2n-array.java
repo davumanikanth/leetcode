@@ -1,16 +1,16 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
-        int n=nums.length;
-        Arrays.sort(nums);
-        int present=Integer.MIN_VALUE;
-        for(int i=1;i<n;i++)
+        int count=0;
+        HashSet<Integer> group=new HashSet<>();
+        for(int i=0;i<nums.length;i++)
         {
-            if( nums[i]==nums[i-1])
+            if(group.contains(nums[i]))
             {
-                 present=nums[i];
+                count= nums[i];
             }
+            group.add(nums[i]);
         }
-        return present;
+        return count;
         
     }
 }
