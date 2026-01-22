@@ -19,7 +19,7 @@ class Solution {
         inorder(node,low,high);
         return sum;
     }
-    Integer prev=null;
+    
     public void inorder(TreeNode root,int low,int high)
     {
         if(root==null) return;
@@ -28,7 +28,7 @@ class Solution {
         {
             sum+=root.val;
         }
-        prev=root.val;
+        
         inorder(root.right,low,high);
     }
 }
