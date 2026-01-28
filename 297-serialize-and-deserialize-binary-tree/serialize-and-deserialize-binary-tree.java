@@ -23,9 +23,12 @@ public class Codec {
                 sb.append("n,");
                 continue;
             }
+            else
+            {
             sb.append(rem.val+",");
             q.offer(rem.left);
             q.offer(rem.right);
+            }
         }
         return sb.toString();
         
