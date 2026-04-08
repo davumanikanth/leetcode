@@ -2,7 +2,7 @@ class Solution {
 
 
     public int xorAfterQueries(int[] nums, int[][] queries) {
-     int mod = 1000000007;
+     long mod = 1000000007;
         // Process each query
         for (int[] t : queries) {
             int l = t[0];
