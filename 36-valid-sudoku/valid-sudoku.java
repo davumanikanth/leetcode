@@ -1,72 +1,41 @@
 class Solution {
     public boolean isValidSudoku(char[][] board) {
-        for(int i=0;i<board.length;i++)
-        {
-            HashSet<Character> row=new HashSet<>();
-             HashSet<Character> col=new HashSet<>();
-             
-            for(int j=0;j<board[0].length;j++)
-            {
-                // for row condition 
-                if(board[i][j]!='.')
-                
-                {
-                    if(row.contains(board[i][j]))
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        row.add(board[i][j]);
-                    }
-                }
-                // for coloum condition
-                if(board[j][i]!='.')
-                {
-                    if(col.contains(board[j][i]))
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        col.add(board[j][i]);
-                    }
-                }
 
+        for(int i = 0; i < 9; i++) {
+            for(int j = 0; j < 9; j++) {
+
+                if(board[i][j] != '.') {
+
+                    char ch = board[i][j];
+                    board[i][j] = '.';
+
+                    if(!isValid(board, i, j, ch))
+                        return false;
+
+                    board[i][j] = ch;
+                }
             }
         }
-        // to check in a box 
-        for(int rowlen=0;rowlen<9;rowlen+=3)
-        {
-             
 
-            for(int  collen=0;collen<9;collen+=3){
-                HashSet<Character> box=new HashSet<>();
-                for(int i=0;i<3;i++)
-                {
-                    for(int j=0;j<3;j++)
-                    {
-                        char current=board[rowlen+i][collen+j];
-                        if(current!='.')
-                        {
-                            if(box.contains(current))
-                            {
-                                return false;
-                            }
-                            else
-                            {
-                                box.add(current);
-                            }
-                        }
-                    }
-                }
+        return true;
+    }
 
+    public boolean isValid(char[][] board, int row, int col, char ch) {
 
+        for(int i = 0; i < 9; i++) {
+            if(board[row][i] == ch) return false;
+            if(board[i][col] == ch) return false;
+        }
 
+        int sr = (row / 3) * 3;
+        int sc = (col / 3) * 3;
+
+        for(int i = sr; i < sr + 3; i++) {
+            for(int j = sc; j < sc + 3; j++) {
+                if(board[i][j] == ch) return false;
             }
         }
-       return true; 
-        
-        
+
+        return true;
     }
 }
