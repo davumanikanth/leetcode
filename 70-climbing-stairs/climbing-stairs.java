@@ -1,21 +1,23 @@
 class Solution {
-    public int climbStairs(int n) {
-         int[] nums=new int[n+1];
-        if(n==1)
-        {
-            return 1;
-        }
-        else
-        {
-            nums[0]=1;
-            nums[1]=1;
-            for(int i=2;i<=n;i++)
-            {
-                nums[i]=nums[i-1]+nums[i-2];
-               
-            }
+    public int count(int n,int[] dp)
+    {
+        if(n==0) return 1;
+        if(n==1) return 1;
+        if(dp[n]!=-1) return dp[n];
 
-        }
-       return nums[n];
+        
+       int  left=count(n-1,dp);
+    
+         int     right=count(n-2,dp);
+        
+        return dp[n]= left+right;
+    }
+    public int climbStairs(int n) {
+        int[] dp=new int[n+1];
+        Arrays.fill(dp,-1);
+
+         return count(n,dp);
+        
+        
     }
 }
