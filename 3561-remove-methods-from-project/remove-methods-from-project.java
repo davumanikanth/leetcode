@@ -37,6 +37,7 @@ class Solution {
             if((visited[u]==false && visited[v]==true) )
             {
                flag=true;
+               break;
             }
 
         }
