@@ -79,3 +79,16 @@ class Solution {
 
     }
 }
+// they were asked to print the replaced string 
+// if (left + 1 < right) {
+
+//     char replacement = t.charAt(left + 1);
+
+//     String result = s.substring(0, k)
+//             + replacement
+//             + s.substring(k + 1);
+
+//     System.out.println(result);
+
+//     return true;
+// }
